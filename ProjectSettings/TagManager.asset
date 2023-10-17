@@ -5,7 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Wall
-  - Buraco
+  - buraco
   layers:
   - Default
   - TransparentFX

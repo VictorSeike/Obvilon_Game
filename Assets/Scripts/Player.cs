@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public float velocidade = 500f;
     public Animator animator;
     private Rigidbody2D playerRigidbody2D;
+    public float velocidade = 20.0f ;
+    public float entradaHorizontal ;
+    public float entradaVertical ;
 
     void Start()
     {
         Debug.Log("Start de " + this.name);
         animator = GetComponent<Animator>();
         playerRigidbody2D = GetComponent<Rigidbody2D>();
+        float velocidade = 20.0f ;
     }
 
     void Update()
@@ -22,15 +25,15 @@ public class Player : MonoBehaviour
 
     private void Movimento()
     {
-        float movimentoHorizontal = Input.GetAxisRaw("Horizontal");
-        float movimentoVertical = Input.GetAxisRaw("Vertical");
+            entradaHorizontal = Input.GetAxisRaw("Horizontal");
+            transform.Translate(Vector3.right*Time.deltaTime*velocidade*entradaHorizontal);
 
-        Vector2 moveDirection = new Vector2(movimentoHorizontal, movimentoVertical).normalized;
-        Vector2 newPosition = playerRigidbody2D.position + moveDirection * velocidade * Time.deltaTime;
+            entradaVertical = Input.GetAxisRaw("Vertical");
+            transform.Translate(Vector3.up*Time.deltaTime*velocidade*entradaVertical);
 
-        playerRigidbody2D.MovePosition(newPosition);
+        // playerRigidbody2D.MovePosition(newPosition);
 
-        if (movimentoVertical > 0)
+        if (entradaVertical > 0)
         {
             animator.SetBool("Walk_Side", true);
         }
@@ -39,7 +42,7 @@ public class Player : MonoBehaviour
             animator.SetBool("Walk_Side", false);
         }
 
-        if (movimentoHorizontal < 0)
+        if (entradaHorizontal < 0)
         {
             animator.SetBool("Walk_Left", true);
         }
@@ -48,7 +51,7 @@ public class Player : MonoBehaviour
             animator.SetBool("Walk_Left", false);
         }
 
-        if (movimentoVertical < 0)
+        if (entradaVertical < 0)
         {
             animator.SetBool("Walk", true);
         }
@@ -57,7 +60,7 @@ public class Player : MonoBehaviour
             animator.SetBool("Walk", false);
         }
 
-        if (movimentoHorizontal > 0)
+        if (entradaHorizontal > 0)
         {
             animator.SetBool("Walk_Right", true);
         }
@@ -66,4 +69,6 @@ public class Player : MonoBehaviour
             animator.SetBool("Walk_Right", false);
         }
     }
+
 }
+
