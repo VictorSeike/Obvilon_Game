@@ -6,21 +6,21 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Inicio.unity
+    path: Assets/Scenes/Jogo/Inicio.unity
     guid: eecb465761f468349a560b06612db341
   - enabled: 1
-    path: Assets/Scenes/Menu.unity
+    path: Assets/Scenes/Menus/Menu.unity
     guid: 952726fa82209b742aa00fdd7fe641fb
   - enabled: 1
-    path: Assets/Scenes/Loading.unity
+    path: Assets/Scenes/Menus/Loading.unity
     guid: f54d9c3366388d14f9b5a2801d5ea669
   - enabled: 1
-    path: Assets/Scenes/Vila.unity
+    path: Assets/Scenes/Jogo/Vila.unity
     guid: 9474232056f0f1949bc52c0f068fe480
   - enabled: 1
-    path: Assets/Scenes/Jogo_Entrada.unity
+    path: Assets/Scenes/Jogo/Jogo_Entrada.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/Labirinto.unity
+    path: Assets/Scenes/Jogo/Labirinto.unity
     guid: a393fbc953b924149b568e00f8e65889
   m_configObjects: {}

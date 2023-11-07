@@ -6,7 +6,7 @@ public class Player : MonoBehaviour
 {
     public Animator animator;
     private Rigidbody2D playerRigidbody2D;
-    public float velocidade = 20.0f ;
+    public float velocidade = 50.0f ;
     public float entradaHorizontal ;
     public float entradaVertical ;
 
@@ -15,7 +15,7 @@ public class Player : MonoBehaviour
         Debug.Log("Start de " + this.name);
         animator = GetComponent<Animator>();
         playerRigidbody2D = GetComponent<Rigidbody2D>();
-        float velocidade = 20.0f ;
+        float velocidade = 50.0f ;
     }
 
     void Update()
