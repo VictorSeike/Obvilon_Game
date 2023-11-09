@@ -46,11 +46,11 @@ TagManager:
   - name: "Ch\xE3o"
     uniqueID: 1751682349
     locked: 0
-  - name: primeiro-layer
-    uniqueID: 3431267151
-    locked: 0
   - name: layer-second
     uniqueID: 221943481
+    locked: 0
+  - name: primeiro-layer
+    uniqueID: 3431267151
     locked: 0
   - name: Default
     uniqueID: 0
